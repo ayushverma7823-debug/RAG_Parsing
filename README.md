@@ -1,36 +1,47 @@
 # Multimodal PDF Parsing Pipeline
+## Project Architecture
+
+```mermaid
 flowchart LR
-    A[📄 PDF Document] --> B[Unstructured PDF Parser]
 
-    B --> C[🔤 Text Extraction]
-    B --> D[📊 Table Extraction]
-    B --> E[🖼️ Image Extraction]
-    B --> F[💬 Caption Extraction]
-    B --> G[🏷️ Metadata Extraction]
+    A["📄 PDF Document"] --> B["Unstructured PDF Parser<br/>hi_res"]
 
-    C --> H[Data Cleaning & Chunking]
+    B --> C["🔤 Text Extraction"]
+    B --> D["📊 Table Extraction"]
+    B --> E["🖼️ Image Extraction"]
+    B --> F["💬 Caption Extraction"]
+    B --> G["🏷️ Metadata Extraction"]
+
+    C --> H["Data Cleaning & Chunking"]
     D --> H
     E --> H
     F --> H
     G --> H
 
-    H --> I[🔢 Embeddings]
-    I --> J[(ChromaDB)]
+    H --> I["🔢 Embeddings"]
+    I --> J[("🗄️ ChromaDB")]
 
-    J --> K[🔍 Retrieval]
-    K --> L[🤖 LLM]
-    L --> M[📈 RAGAS Evaluation]
+    J --> K["🔍 Retrieval"]
+    K --> L["🤖 LLM Generation"]
+    L --> M["📈 RAGAS Evaluation"]
 
-    style A fill:#f5f5f5,stroke:#333
-    style B fill:#e8f1ff,stroke:#2563eb
-    style C fill:#e8f8ee,stroke:#16a34a
-    style D fill:#fff7df,stroke:#d97706
-    style E fill:#eaf2ff,stroke:#2563eb
-    style F fill:#f3eaff,stroke:#7c3aed
-    style G fill:#ffeaea,stroke:#dc2626
-    style J fill:#eee8ff,stroke:#7c3aed
-    style L fill:#ffe8e8,stroke:#dc2626
-    style M fill:#e8f1ff,stroke:#2563eb
+    style A fill:#f3f4f6,stroke:#374151,stroke-width:2px
+    style B fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+
+    style C fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    style D fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style E fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style F fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
+    style G fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+
+    style H fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
+    style I fill:#ede9fe,stroke:#7c3aed,stroke-width:2px
+    style J fill:#ddd6fe,stroke:#6d28d9,stroke-width:2px
+
+    style K fill:#fef3c7,stroke:#ca8a04,stroke-width:2px
+    style L fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+    style M fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+```
 A Python-based PDF parsing pipeline for extracting and structuring
 **text, tables, images, captions, and metadata** from complex PDF
 documents using

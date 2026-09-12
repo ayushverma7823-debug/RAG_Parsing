@@ -1,6 +1,8 @@
 # Multimodal PDF Parsing Pipeline
 ## Project Architecture
 
+## Project Architecture
+
 ```mermaid
 flowchart LR
 
@@ -25,22 +27,22 @@ flowchart LR
     K --> L["🤖 LLM Generation"]
     L --> M["📈 RAGAS Evaluation"]
 
-    style A fill:#f3f4f6,stroke:#374151,stroke-width:2px
-    style B fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style A fill:#f3f4f6,stroke:#374151,stroke-width:2px,color:#000000
+    style B fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#000000
 
-    style C fill:#dcfce7,stroke:#16a34a,stroke-width:2px
-    style D fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style E fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style F fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
-    style G fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+    style C fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#000000
+    style D fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#000000
+    style E fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#000000
+    style F fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#000000
+    style G fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#000000
 
-    style H fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
-    style I fill:#ede9fe,stroke:#7c3aed,stroke-width:2px
-    style J fill:#ddd6fe,stroke:#6d28d9,stroke-width:2px
+    style H fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#000000
+    style I fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#000000
+    style J fill:#ddd6fe,stroke:#6d28d9,stroke-width:2px,color:#000000
 
-    style K fill:#fef3c7,stroke:#ca8a04,stroke-width:2px
-    style L fill:#fee2e2,stroke:#dc2626,stroke-width:2px
-    style M fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style K fill:#fef3c7,stroke:#ca8a04,stroke-width:2px,color:#000000
+    style L fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#000000
+    style M fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#000000
 ```
 A Python-based PDF parsing pipeline for extracting and structuring
 **text, tables, images, captions, and metadata** from complex PDF

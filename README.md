@@ -1,5 +1,36 @@
 # Multimodal PDF Parsing Pipeline
+flowchart LR
+    A[📄 PDF Document] --> B[Unstructured PDF Parser]
 
+    B --> C[🔤 Text Extraction]
+    B --> D[📊 Table Extraction]
+    B --> E[🖼️ Image Extraction]
+    B --> F[💬 Caption Extraction]
+    B --> G[🏷️ Metadata Extraction]
+
+    C --> H[Data Cleaning & Chunking]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+
+    H --> I[🔢 Embeddings]
+    I --> J[(ChromaDB)]
+
+    J --> K[🔍 Retrieval]
+    K --> L[🤖 LLM]
+    L --> M[📈 RAGAS Evaluation]
+
+    style A fill:#f5f5f5,stroke:#333
+    style B fill:#e8f1ff,stroke:#2563eb
+    style C fill:#e8f8ee,stroke:#16a34a
+    style D fill:#fff7df,stroke:#d97706
+    style E fill:#eaf2ff,stroke:#2563eb
+    style F fill:#f3eaff,stroke:#7c3aed
+    style G fill:#ffeaea,stroke:#dc2626
+    style J fill:#eee8ff,stroke:#7c3aed
+    style L fill:#ffe8e8,stroke:#dc2626
+    style M fill:#e8f1ff,stroke:#2563eb
 A Python-based PDF parsing pipeline for extracting and structuring
 **text, tables, images, captions, and metadata** from complex PDF
 documents using

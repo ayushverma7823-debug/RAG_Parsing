@@ -56,7 +56,7 @@ parsing stage** of a multimodal RAG pipeline.
 
 A PDF document is processed with Unstructured's high-resolution
 (`hi_res`) strategy, allowing the pipeline to identify and extract
-different document elements while preserving useful metadata.
+different document elements while preserving useful metadata
 
 ### Current Pipeline
 

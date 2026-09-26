@@ -46,7 +46,7 @@ flowchart LR
 ```
 A Python-based PDF parsing pipeline for extracting and structuring
 **text, tables, images, captions, and metadata** from complex PDF
-documents using
+documents using.
 [Unstructured](https://github.com/Unstructured-IO/unstructured).
 
 ## Overview
